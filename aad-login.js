@@ -14,8 +14,8 @@ if (!directory || !clientid) {
   process.exit(1);
 }
 
-var username = process.argv[2];
-var password = process.argv[3];
+var username = process.env.PAM_USER;
+var password = process.env.password;
 
 if (username && password) {
   request = {
